@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA JAM: On Fire Edition Projects by johnz1</title>
 	<link rel="icon" href="images/favicon_32x32.png" type="image/png" sizes="32x32">
 	<link rel="icon" href="images/favicon_192x192.png" type="image/png" sizes="192x192">
@@ -22,7 +23,14 @@
 		.container {
 			max-width: 1300px;
 			margin: 0 auto;
-			padding: 0 32px;
+			padding: 0 32px;   /* Desktop/tablet padding */
+		}
+
+		/* Mobile adjustments */
+		@media (max-width: 600px) {
+			.container {
+				padding: 0 16px;  /* Smaller padding on phones */
+			}
 		}
 
 		/* Full-bleed sections: make the background reach viewport edges */
@@ -31,7 +39,8 @@
 			margin-left: calc(50% - 50vw);
 			margin-right: calc(50% - 50vw);
 			/* Optional vertical spacing and text color inheritance */
-			padding: 0; /* keep section padding on the inner .container if you prefer */
+			padding-top: 50px;
+			padding-bottom: 80px;
 		}
 
 		/* Section color themes */
@@ -69,7 +78,7 @@
 	<section class="section s1">
 		<div class="container">
 			<div class="center-image">
-				<img src="images/johnz1_projects.png" alt="NBA JAM: On Fire Edition Projects by johnz1" width="600px">
+				<img src="images/johnz1_projects.png" alt="NBA JAM: On Fire Edition Projects by johnz1">
 			</div>
 			<br>
 			The NBA Jam franchise was successfully rebooted in 2010 for Xbox 360, PlayStation 3, and Wii.  One year later, the developers took the time to polish and expand the game with "NBA JAM: On Fire Edition".  But after three roster updates, the franchise was abandoned.  More than a decade later, there has been no sign of a new NBA Jam game.  In 2019, I stopped waiting.  It took me more than four years to release the first ever NBA JAM OFE mod project, "NBA JAM: Legends On Fire Edition".  Now, I have six in development.
@@ -79,18 +88,13 @@
 			<br>
 			<br>
 			- johnz1
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s2">
 		<div class="container">
-			<br>
 			<center><h1>Released Projects</h1></center>
 			<br>
-			<h2><img src="images/legends_on_fire_edition.png" alt="NBA JAM: Legends On Fire Edition" width="820px"></h2>
+			<img src="images/legends_on_fire_edition.png" alt="NBA JAM: Legends On Fire Edition"><br>
 			NBA JAM: Legends On Fire Edition is a historical conversion mod featuring the best players on the best 67 teams of the last four decades. Each team represents a specific era of a franchise.
 			<p>Latest version: v1.1 (2023-05-03)</p>
 			<p style="line-height: 0.1;"></p>
@@ -101,7 +105,7 @@
 			&#x2022; <a href="https://forums.nba-live.com/viewtopic.php?f=72&t=114923"  target="_blank" rel="noopener">NLSC forum thread</a>
 			<br>
 			<br>
-			<h2><img src="images/2020s_on_fire_edition.png" alt="NBA JAM: 2020s On Fire Edition" width="820px"></h2>
+			<img src="images/2020s_on_fire_edition.png" alt="NBA JAM: 2020s On Fire Edition"><br>
 			NBA JAM: 2020s On Fire Edition is a historical conversion mod featuring every franchise's best teams of the 2020s.
 			<p>Latest version: v5.1 (2026-02-06)</p>
 			<p style="line-height: 0.1;"></p>
@@ -112,7 +116,7 @@
 			&#x2022; <a href="https://forums.nba-live.com/viewtopic.php?f=72&t=116614"  target="_blank" rel="noopener">NLSC forum thread</a>
 			<br>
 			<br>
-			<h2><img src="images/1990s_on_fire_edition.png" alt="NBA JAM: 1990s On Fire Edition" width="820px"></h2>
+			<img src="images/1990s_on_fire_edition.png" alt="NBA JAM: 1990s On Fire Edition"><br>
 			NBA JAM: 1990s On Fire Edition is a historical conversion mod featuring every franchise's best teams of the 1990s (and 80s).
 			<p>Latest version: v1.1 (2024-12-14)</p>
 			<p style="line-height: 0.1;"></p>
@@ -123,7 +127,7 @@
 			&#x2022; <a href="https://forums.nba-live.com/viewtopic.php?f=72&t=116289"  target="_blank" rel="noopener">NLSC forum thread</a>
 			<br>
 			<br>
-			<h2><img src="images/on_fire_edition_2023.png" alt="NBA JAM: On Fire Edition 2023" width="820px"></h2>
+			<img src="images/on_fire_edition_2023.png" alt="NBA JAM: On Fire Edition 2023"><br>
 			NBA JAM: On Fire Edition 2023 is a roster update mod featuring 21 teams from the 2022-23 season.  This project was discontinued after v1.0.
 			<p>Latest version: v1.0 (2023-04-23)</p>
 			<p style="line-height: 0.1;"></p>
@@ -132,15 +136,10 @@
 			&#x2022; <a href="https://www.youtube.com/watch?v=aZu9YZK0CVc"  target="_blank" rel="noopener">YouTube trailer</a>
 			<br>
 			&#x2022; <a href="https://forums.nba-live.com/viewtopic.php?f=72&t=115019"  target="_blank" rel="noopener">NLSC forum thread</a>
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s1">
 		<div class="container">
-			<br>
 			<center><h1>Projects in Development</h1></center>
 			<br>
 			<h2>NBA JAM: On Fire Edition Modding Guide</h2>
@@ -167,30 +166,20 @@
 			The new technical achievement in this release is that it uses the ATTRIBDB and textures from the last official roster update in 2013 (rend_roster_update_big.ast). That means there are more players to replace (especially more skinny players, which are in high demand). Unfortunately, this severely shuffled the player models, so I had to go back to square one and re-do all the player model swaps.
 			<br>
 			Estimated release date: Unknown
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s2">
 		<div class="container">
-			<br>
 			<center><h1>Projects on Hold</h1></center>
 			<br>
 			<h2>NBA JAM: Franchise Legends On Fire Edition</h2>
 			As it is currently planned, NBA JAM: Franchise Legends On Fire Edition would feature the best players of the last four decades for every franchise. This would be similar to Legends On Fire Edition, but there would only be one team per franchise (just like stock OFE).
 			<br>
 			I want to create this project, but without the ability to edit ATTRIBDB, it is just too complex and too many compromises that have to be made. Until ATTRIBDB can be edited, I'm going to focus on the other projects I have in development.
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s1">
 		<div class="container">
-			<br>
 			<center><h1>How to Help</h1></center>
 			<br>
 			The most important thing to figure out is how to edit ATTRIBDB.  This will make most things far easier to change, and will open up many more mod opportunities.  Please see this NLSC forum post for the the latest information on this effort: <a href="https://forums.nba-live.com/viewtopic.php?f=72&t=116319">https://forums.nba-live.com/viewtopic.php?f=72&t=116319</a>
@@ -209,15 +198,10 @@
 			&#x2022; Change the length of shorts (many players wear shorts are in between the game's two shorts lengths)
 			<br>
 			&#x2022; Edit dunk animations
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s2">
 		<div class="container">
-			<br>
 			<center><h1>Frequently Asked Questions</h1></center>
 			<br>
 			Q: Hold on a second...  I love NBA JAM.  Is this real?!
@@ -288,18 +272,11 @@
 			Q: How can I unlock the bonus teams and players if I'm not good enough to beat the computer on "Real AI" difficulty?
 			<br>
 			A: The game gives you a nice little bonus (~15,000 credits and a bump to level 10) if you have a save game file from the 2010 NBA JAM game on your PS3.
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 	</section>
 	<section class="section s1">
 		<div class="container">
-			<br>
 			Copyright © 2026 'nba-jam.com'.  All rights reserved.  This website is not affiliated with, endorsed by, or sponsored by Electronic Arts (EA), the National Basketball Association (NBA), or any of their subsidiaries or partners.  All trademarks and copyrights belong to their respective owners.
-			<br>
-			<br>
 		</div>
 	</section>
 </body>
